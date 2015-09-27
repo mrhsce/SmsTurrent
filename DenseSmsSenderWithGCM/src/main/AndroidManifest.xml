@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mrhs.ce.DenseSms"
+    android:installLocation="preferExternal"
+    android:versionCode="8"
+    android:versionName="1.4.2" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- GCM connects to Internet Services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="mrhs.ce.DenseSms.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="mrhs.ce.DenseSms.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Network State Permissions to detect Internet status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="mrhs.ce.DenseSms.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="mrhs.ce.DenseSms.PostMessageActivity"
+            android:label="@string/title_activity_on_message_sent"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="mrhs.ce.DenseSms.ContactPickerMulti"
+            android:label="title_activity_contact_picker_multi"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="mrhs.ce.DenseSms.GroupEditorActivity"
+            android:label="@string/title_activity_edit_group"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="mrhs.ce.DenseSms" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="mrhs.ce.DenseSms.GCMIntentService" />
+
+        <activity
+            android:name="gcm.GcmTransparentDialogHandler"
+            android:launchMode="singleTop" 
+            android:label="@string/title_activity_gcm_transparent_dialogue_handler"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
+            android:name="gcm.GCMForceUpdateActivity"
+            android:label="@string/title_activity_gcmforce_update" >
+        </activity>
+    </application>
+
+</manifest>
