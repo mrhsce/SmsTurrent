@@ -12,6 +12,12 @@ Things to do ->
 
 	* Add an ability to send the message at a specific time in the future
 
+	* Add file explorer to select the text file 
+
+	* Add pause ability to the sending queue
+
+	* Add a graphical sign to show the status of the sending queue(sending - finished - paused)
+
 	Fourth phase:
 	- Design the date converter class for converting the date from Gregorian to Jalali
 	- Add search feature to the contact list maker
