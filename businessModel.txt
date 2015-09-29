@@ -1,0 +1,9 @@
+The model for this app will be in app purchase 
+
+price: 899 t
+
+These features will be available only when the user buys the app:
+- Creating group with more than ten people
+- Message length more than one
+- Inserting phone numbers from the sd card
+- The ability to schedule sending the message for the future

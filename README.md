@@ -7,6 +7,11 @@ This application automatically send the determined text to the phone numbers ins
 
 Things to do ->
 
+
+	* Add message cost estimation to the main activity that calculate the cost based on the type of the operator and the type of the message(farsi- english)
+
+	* Add an ability to send the message at a specific time in the future
+
 	Fourth phase:
 	- Design the date converter class for converting the date from Gregorian to Jalali
 	- Add search feature to the contact list maker

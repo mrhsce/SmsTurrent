@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">پیامک انبوه</string>
+    <string name="app_name">ارسال پیامک انبوه</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_on_message_sent">OnMessageSent</string>
@@ -17,6 +17,6 @@
 	ارسال کنید و ما را در هر چه بهتر کردن این نرم افزار یاری دهید\n
 	منتظر اضافه شدن ویژگی های جدید در نسخه های بعدی باشید.\n
 	version 1.6.5\n
-	توسعه دهنده: محمدرضا حیدریان</string>
+	androtech software group</string>
 
 </resources>
