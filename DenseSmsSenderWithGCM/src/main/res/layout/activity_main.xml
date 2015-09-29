@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+   <LinearLayout 
+       android:id="@+id/linlayout1"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:orientation="horizontal">
+       
+    <Button
+        android:id="@+id/buttonEdit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:textSize="10dp"
+		android:enabled="true"
+        android:text="ویرایش" />   
+   
+	<Spinner
+        android:id="@+id/phoneNumSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="4"/>
+
+	<TextView
+	    android:id="@+id/phoneCountLabel"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:text="300\nشماره"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textSize="12sp"
+	    android:layout_weight="1" />
+    	
+    </LinearLayout>
+    <EditText
+        android:id="@+id/messageText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please insert the message text here"
+        android:layout_below="@id/linlayout1"
+         />
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND"
+        android:layout_below="@+id/messageText" 
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/messageCountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/messageText"
+        android:layout_toRightOf="@id/sendButton"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="0\nپیام"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonAddUsingContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonAddManually"
+        android:layout_centerHorizontal="true"
+        android:text="اضافه کردن گروه از مخاطبان" />
+
+    <Button
+        android:id="@+id/buttonAddManually"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonAbout"
+        android:layout_centerHorizontal="true"
+        android:text="اضافه کردن دستی" />
+
+    <Button
+        android:id="@+id/buttonMessageLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonAddUsingContacts"
+        android:layout_centerHorizontal="true"
+        android:text="پیام های فرستاده شده" />
+    <Button
+        android:id="@+id/buttonAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="درباره ما" />
+
+</RelativeLayout>

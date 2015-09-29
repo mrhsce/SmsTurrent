@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5sp"
+    android:layout_marginRight="5sp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="10dp" >
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"    
+    android:orientation="horizontal"   
+    >
+            
+   <TextView
+	    android:id="@+id/labelDate"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:fontFamily="bold"
+	    android:text="22/6/1393 12:30"
+	    android:textColor="#654321"
+	    android:textSize="10sp"	 
+	    android:layout_weight="1" />
+   <TextView
+        android:id="@+id/labelFailed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ناموفق: 0"
+        android:textColor="#FE4531"
+        android:textSize="10sp"
+        android:layout_weight="1"/>
+   <TextView
+       android:id="@+id/lebelDelivered"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="دریافت شده: 0"
+       android:textColor="#BADC40"
+       android:textSize="10sp"
+       android:layout_weight="1" />  
+    <TextView
+        android:id="@+id/labelSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="فرستاده شده: 0"
+        android:textColor="#87CEEB"
+        android:textSize="10sp"
+        android:layout_weight="1"/>    
+   
+   </LinearLayout>
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:orientation="horizontal" >
+
+<TextView
+    android:id="@+id/labelCount"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="تعداد: 0"
+    android:textColor="#654321"
+    android:textSize="12sp"
+    android:layout_weight="1" />
+<TextView
+    android:id="@+id/labelGroupName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="bold"
+    android:text="گروه دوستان من"
+    android:textColor="#ffffff"
+    android:textSize="20sp" 
+    android:gravity="right"
+    android:layout_weight="6"/>
+
+</LinearLayout>
+
+
+
+<TextView
+    android:id="@+id/labelMessageText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="bold"
+    android:gravity="right"
+    android:textColor="#ffffff"
+    android:text="سلام حالتون چطوره شما خوبید"
+    android:ellipsize="end"
+	android:maxLines="1"
+	android:scrollHorizontally="true"
+	android:singleLine="true"
+    android:textSize="14sp" />
+
+</LinearLayout>
