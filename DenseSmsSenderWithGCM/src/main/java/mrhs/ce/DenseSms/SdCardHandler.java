@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
 
+import mrhs.ce.DenseSms.Database.ContactDatabaseHandler;
+
 import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
@@ -12,7 +14,7 @@ import android.widget.Toast;
 
 public class SdCardHandler {
 	
-	DatabaseHandler db;
+	ContactDatabaseHandler db;
 	Context ctx;
 	
 // Constants related to the condition of the file and the sdcard
@@ -24,7 +26,7 @@ public class SdCardHandler {
     final Integer no_text_file=4;
     final Integer text_file_exists=5;
 	
-	public SdCardHandler(DatabaseHandler db , Context ctx){
+	public SdCardHandler(ContactDatabaseHandler db , Context ctx){
 		this.db=db;
 		this.ctx=ctx;
 	}
@@ -74,7 +76,7 @@ public class SdCardHandler {
     }
 	private ArrayList<ArrayList<ArrayList<String>>> getTextFileContents(ArrayList<String> addrList){ // returns the contents of the text files based on the names list
     	
-    	ArrayList<ArrayList<ArrayList<String>>> phoneList=new ArrayList<ArrayList<ArrayList<String>>>();
+    	ArrayList<ArrayList<ArrayList<String>>> phoneList=new ArrayList<ArrayList<ArrayList<String>>>();    	
     	for(int i=0 ; i<addrList.size() ; i++){
     		phoneList.add(new ArrayList<ArrayList<String>>());
     		File file=new File(Environment.getExternalStorageDirectory().toString()+
@@ -84,14 +86,18 @@ public class SdCardHandler {
     			String line;
     			int counter=0;
     			while ((line=br.readLine())!= null){
+    				line.replaceAll("\\t+"," ");
+    				line.replaceAll("\\s+"," ");
     				if(line.split("[ \t]+")[0].matches("(\\+98|0)[0-9]{10}")){
     					phoneList.get(i).add(new ArrayList<String>());
     					phoneList.get(i).get(counter).add(line.split("[ \t]+")[0]);
-    					if(line.split("[ \t]+").length>1)
-    						phoneList.get(i).get(counter).add(line.split("[ \t]+")[1]);
-    					else
-    						phoneList.get(i).get(counter).add("");
-    					counter++;
+    					String tmpStr = "";
+						for(int j=1;j<line.split("[ \t]+").length;j++){
+							tmpStr += line.split("[ \t]+")[j] + " ";
+						}
+						phoneList.get(i).get(counter).add(tmpStr.trim());
+    					
+						counter++;
     				}
     			}
     			br.close();

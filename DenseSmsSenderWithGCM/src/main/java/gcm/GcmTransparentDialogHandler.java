@@ -38,7 +38,7 @@ public class GcmTransparentDialogHandler extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_gcm_transparent_dialogue_handler);
+		setContentView(R.layout.gcm_activity_transparent_dialogue_handler);
 		packageName = getPackageName();
 		try {
 			versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
@@ -148,7 +148,7 @@ public class GcmTransparentDialogHandler extends Activity {
 		Log.d("GCM_transparent_activity",message);
 	}
 	
-	public class GcmReportDialog extends Dialog implements android.view.View.OnClickListener {		
+	public class GcmReportDialog extends Dialog implements View.OnClickListener {
 		
 		Activity parent;
 		Button yes;
@@ -190,7 +190,7 @@ public class GcmTransparentDialogHandler extends Activity {
 
 	}
 	
-	public class GcmBuyDialog extends Dialog implements android.view.View.OnClickListener {
+	public class GcmBuyDialog extends Dialog implements View.OnClickListener {
 		
 		Activity parent;
 		Button yes, no;

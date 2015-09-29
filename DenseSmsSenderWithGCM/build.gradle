@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "mrhs.ce.DenseSms"
-        minSdkVersion 9
+        minSdkVersion 14
         targetSdkVersion 18
     }
 

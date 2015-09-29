@@ -9,10 +9,10 @@ so manually move them:
 
 * .gitignore
 * .gitignore~
+* .project~
 * JamaAppProjectMultipleSmsSender v1.3.9.apk
 * LICENSE
 * README.md
-* README.md~
 * ic_launcher-web.png
 * proguard-project.txt
 
@@ -21,12 +21,11 @@ Moved Files:
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => DenseSmsSenderWithGCM/src/main/AndroidManifest.xml
-* assets/ => DenseSmsSenderWithGCM/src/main/assets/
-* libs/android-support-v4.jar => DenseSmsSenderWithGCM/libs/android-support-v4.jar
-* libs/gcm.jar => DenseSmsSenderWithGCM/libs/gcm.jar
-* res/ => DenseSmsSenderWithGCM/src/main/res/
-* src/ => DenseSmsSenderWithGCM/src/main/java/
+* AndroidManifest.xml => DenseSmsSenderApp/src/main/AndroidManifest.xml
+* assets/ => DenseSmsSenderApp/src/main/assets/
+* libs/android-support-v4.jar => DenseSmsSenderApp/libs/android-support-v4.jar
+* res/ => DenseSmsSenderApp/src/main/res/
+* src/ => DenseSmsSenderApp/src/main/java/
 
 Next Steps:
 -----------

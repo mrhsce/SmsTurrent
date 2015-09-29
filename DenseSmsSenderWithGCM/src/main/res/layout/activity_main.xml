@@ -82,9 +82,23 @@
         android:id="@+id/buttonAddManually"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/buttonAbout"
         android:layout_centerHorizontal="true"
         android:text="اضافه کردن دستی" />
-    
+
+    <Button
+        android:id="@+id/buttonMessageLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonAddUsingContacts"
+        android:layout_centerHorizontal="true"
+        android:text="پیام های فرستاده شده" />
+    <Button
+        android:id="@+id/buttonAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="درباره ما" />
 
 </RelativeLayout>

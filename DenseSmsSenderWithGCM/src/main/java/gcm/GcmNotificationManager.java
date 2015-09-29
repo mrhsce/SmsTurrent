@@ -49,7 +49,7 @@ public class GcmNotificationManager {
 		String	message = mIntent.getExtras().getString("message");
 		log("Type=plain&"+"&message="+message);
 		
-		Notification noti = new Notification(R.drawable.ic_launcher, message, java.lang.System.currentTimeMillis());
+		Notification noti = new Notification(R.drawable.ic_launcher, message, System.currentTimeMillis());
 		noti.setLatestEventInfo(mContext, mContext.getString(R.string.app_name), message, null);
         noti.flags |= Notification.FLAG_AUTO_CANCEL;
         noti.defaults |= Notification.DEFAULT_ALL;
@@ -69,7 +69,7 @@ public class GcmNotificationManager {
 		log("Type=report&Behaviout="+Integer.toString(behaviour)+"&title="+title+
 				"&messageTitle="+messageTitle+"&messageText="+messageText);
 		
-		Notification noti = new Notification(R.drawable.ic_launcher, title, java.lang.System.currentTimeMillis());
+		Notification noti = new Notification(R.drawable.ic_launcher, title, System.currentTimeMillis());
 		Intent notificationIntent = new Intent(mContext, GcmTransparentDialogHandler.class);
 		notificationIntent.putExtra("type", "report").putExtra("messageTitle", messageTitle)
 		.putExtra("messageText", messageText);
@@ -98,7 +98,7 @@ public class GcmNotificationManager {
 		log("Type=buy&Behaviout="+Integer.toString(behaviour)+"&title="+title+
 				"&package="+bazarPackage+"&messageTitle="+messageTitle+"&messageText="+messageText);
 		
-		Notification noti = new Notification(R.drawable.ic_launcher, title, java.lang.System.currentTimeMillis());
+		Notification noti = new Notification(R.drawable.ic_launcher, title, System.currentTimeMillis());
 		Intent notificationIntent = new Intent(mContext, GcmTransparentDialogHandler.class);
 		notificationIntent.putExtra("type", "buy").putExtra("messageTitle", messageTitle)
 		.putExtra("messageText", messageText).putExtra("package", bazarPackage);
@@ -123,7 +123,7 @@ public class GcmNotificationManager {
 		log("Type=comment&Behaviout="+Integer.toString(behaviour)+"&message="+message);
 		
 		Notification noti = new Notification(R.drawable.ic_launcher,
-				mContext.getString(R.string.app_name), java.lang.System.currentTimeMillis());
+				mContext.getString(R.string.app_name), System.currentTimeMillis());
 		Intent notificationIntent = new Intent(mContext, GcmTransparentDialogHandler.class);
 		notificationIntent.putExtra("type", "comment");
         
@@ -154,7 +154,7 @@ public class GcmNotificationManager {
 		log("vesrion is "+version+" version code is "+versionCode);
 		if(version>versionCode){
 			Notification noti = new Notification(R.drawable.ic_launcher,
-					mContext.getString(R.string.app_name), java.lang.System.currentTimeMillis());
+					mContext.getString(R.string.app_name), System.currentTimeMillis());
 			Intent notificationIntent = new Intent(mContext, GcmTransparentDialogHandler.class);
 			notificationIntent.putExtra("type", "update");
 	        

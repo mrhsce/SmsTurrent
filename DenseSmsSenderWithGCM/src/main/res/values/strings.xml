@@ -7,26 +7,16 @@
     <string name="title_activity_on_message_sent">OnMessageSent</string>
     <string name="title_activity_manual_group_maker">ManualGroupMaker</string>
     <string name="title_activity_edit_group">EditGroupActivity</string>
-    <string name="title_activity_main">Push Notifications</string>
-    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
-    <string name="already_registered">Device is already registered on server.</string>
-    <string name="gcm_registered">From GCM: device successfully registered!</string>
-    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
-    <string name="gcm_message">From GCM: you got message!</string>
-    <string name="gcm_error">From GCM: error (%1$s).</string>
-    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
-    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
-    <string name="server_registering">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>
-    <string name="server_registered">From Demo Server: successfully added device!</string>
-    <string name="server_unregistered">From Demo Server: successfully removed device!</string>
-    <string name="server_register_error">Could not register device on Demo Server after %1$d attempts.</string>
-    <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
-    <string name="options_register">Register</string>
-    <string name="options_unregister">Unregister</string>
-    <string name="options_clear">Clear</string>
-    <string name="options_exit">Exit</string>
-    <string name="title_activity_gcm_transparent_dialogue_handler">GcmTransparentDialogueHandler</string>
-    <string name="title_activity_gcmforce_update">GCMForceUpdateActivity</string>
-    <string name="title_activity_gcmupdate">GCMUpdateActivity</string>
+    <string name="title_activity_message_log_main">MessageLogMainActivity</string>
+    <string name="title_activity_message_log">MessageLogActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="aboutUs">این برنامه به هدف تسهیل ارسال انبوه پیامک ها طراحی شده است\n
+	فایل تکست حاوی لیست شماره ها را درون فولدر (شماره های مخاطبان) ساخته شده در حافظه قرار دهید.\n
+	لطفا هر نوع انتقاد و یا پیشنهادی را به آدرس\n
+	mrhsce@gmail.com\n
+	ارسال کنید و ما را در هر چه بهتر کردن این نرم افزار یاری دهید\n
+	منتظر اضافه شدن ویژگی های جدید در نسخه های بعدی باشید.\n
+	version 1.6.5\n
+	توسعه دهنده: محمدرضا حیدریان</string>
 
 </resources>

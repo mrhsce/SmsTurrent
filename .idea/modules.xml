@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DenseSmsSenderApp/DenseSmsSenderApp.iml" filepath="$PROJECT_DIR$/DenseSmsSenderApp/DenseSmsSenderApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/DenseSmsSenderForBazaar.iml" filepath="$PROJECT_DIR$/DenseSmsSenderForBazaar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/DenseSmsSenderWithGCM/DenseSmsSenderWithGCM.iml" filepath="$PROJECT_DIR$/DenseSmsSenderWithGCM/DenseSmsSenderWithGCM.iml" />
     </modules>
   </component>
 </project>

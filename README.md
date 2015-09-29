@@ -7,6 +7,41 @@ This application automatically send the determined text to the phone numbers ins
 
 Things to do ->
 
+	Fourth phase:
+	- Design the date converter class for converting the date from Gregorian to Jalali
+	- Add search feature to the contact list maker
+	- before sending there should be a check button that when this check button is ticked after sending the messages listens 
+		for the specific respond from the audience(like 0 or 1) and then base on that adds another status to the 
+		numbers(accepted or rejected or not answered) and this will be added to the filters- this message should also 
+		be allowed to enter the phone default messaging application
+	- the detailed message status page should have spinner for filtering the different status numbers like all,sent,delivered,
+		failed,answered,not answered and etc	
+	- when long clicking each operation there should be a dialog for {view,delete,copy message,forward to the group}
+		*If the group is deleted toast about it ** for forwarding close the current activity and putExtra the data
+	- when long pressing the message text there should be a dialog to copy the text inside it
+	- when long clicking each item in the message log array there should be a dialog to show the latest response date time
+	- an option in the main activity menu to force stop the service by user
+	- a mechanism that the service stops itself after being informed about the delivery report of all messages or 
+		finishing timeout after the last received report
+	- Add sim card choice to the main activity for when the device has two sim card(this option should be disabled
+		when the device has only one)	
+	- optimizing the service
+	- make notification for the last series of sent messages and how to change it without informing the user
+		 of a new notification	and an option to deactivate it
+			
+
+	
+	- A mechanism for sending message to failed contacts
+	to see the results you can just close the app but still the detail are saved in the database)	
+	- as long as the number of the sent and delivered messages hasn't reached the maximum there should be a small animation
+	running for each
+	- work on the graphic and use branched weighting and scroll bars for the views
+	- add attribute source to the database to differentiate groups automatically created and manuals
+	in order to add duplicate sd based groups
+	- add mechanism for exporting the groups
+
+
+-------------------------------------------------------------------
 	First phase:
 	- ✔ disable screen rotation
 	- ✔ check to see if there exist any sd card
@@ -43,35 +78,4 @@ Things to do ->
 	- ✔ Solve the problem of sending several operatoin failing in the service add some delay to the next series 
 			and reduce it every second 
 	
-	Fourth phase:
-	- Design the date converter class for converting the date from Gregorian to Jalali
-	- Add search feature to the contact list maker
-	- before sending there should be a check button that when this check button is ticked after sending the messages listens 
-		for the specific respond from the audience(like 0 or 1) and then base on that adds another status to the 
-		numbers(accepted or rejected or not answered) and this will be added to the filters- this message should also 
-		be allowed to enter the phone default messaging application
-	- the detailed message status page should have spinner for filtering the different status numbers like all,sent,delivered,
-		failed,answered,not answered and etc	
-	- when long clicking each operation there should be a dialog for {view,delete,copy message,forward to the group}
-		*If the group is deleted toast about it ** for forwarding close the current activity and putExtra the data
-	- when long pressing the message text there should be a dialog to copy the text inside it
-	- when long clicking each item in the message log array there should be a dialog to show the latest response date time
-	- an option in the main activity menu to force stop the service by user
-	- a mechanism that the service stops itself after being informed about the delivery report of all messages or 
-		finishing timeout after the last received report
-	- Add sim card choice to the main activity for when the device has two sim card(this option should be disabled
-		when the device has only one)	
-	- optimizing the service
-	- make notification for the last series of sent messages and how to change it without informing the user
-		 of a new notification	and an option to deactivate it
-			
-
 	
-	- A mechanism for sending message to failed contacts
-	to see the results you can just close the app but still the detail are saved in the database)	
-	- as long as the number of the sent and delivered messages hasn't reached the maximum there should be a small animation
-	running for each
-	- work on the graphic and use branched weighting and scroll bars for the views
-	- add attribute source to the database to differentiate groups automatically created and manuals
-	in order to add duplicate sd based groups
-	- add mechanism for exporting the groups

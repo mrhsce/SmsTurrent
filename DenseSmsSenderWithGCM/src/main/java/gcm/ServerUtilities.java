@@ -101,7 +101,7 @@ public final class ServerUtilities {
      * @param endpoint POST address.
      * @param params request parameters.
      *
-     * @throws IOException propagated from POST.
+     * @throws java.io.IOException propagated from POST.
      */
     private static void post(String endpoint, Map<String, String> params)
             throws IOException {   	

@@ -17,7 +17,7 @@ public class GCMForceUpdateActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_gcmforce_update);
+		setContentView(R.layout.gcm_activity_force_update);
 		Button updateButton = (Button)findViewById(R.id.updateButton);
 		updateButton.setOnClickListener(new View.OnClickListener() {
 			
@@ -54,7 +54,7 @@ public class GCMForceUpdateActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.gcmforce_update, menu);
+		getMenuInflater().inflate(R.menu.gcm_force_update, menu);
 		return true;
 	}
 
